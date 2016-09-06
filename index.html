@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Last Fantasy World </title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" href="sweetalert.css">
+        <link rel="stylesheet" href="responsiveslides.css">
+        
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+
+    <body>
+        <header>
+            <h1 id="mainlogo">LAST FANTASY WORLD</h1>
+            
+                <nav>
+                    <ul>                   
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <div id="headerclear"></div>
+            <div class="container">
+            <ul class="rslides">
+                <li><img src="./img/fantasyWarr.jpg" alt=""/></li>   
+                <li><img src="./img/slider4.jpeg" alt=""/></li> 
+                <li><img src="./img/slider1.jpg" alt=""/></li> 
+                <li><img src="./img/slider2.jpg" alt=""/></li> 
+                <li><img src="./img/slider3.jpg" alt=""/></li> 
+                <li><img src="./img/slider5.jpg" alt=""/></li> 
+                <li><img src="./img/slider6.jpg" alt=""/></li> 
+                <li><img src="./img/dschar.jpg" alt=""/></li>   
+                <li><img src="./img/darkwizard.jpg" alt=""/></li> 
+                <li><img src="./img/spchar.jpg" alt=""/></li>   
+            </ul>
+            </div>
+
+ 
+        <section id="age_check_section">
+        
+        <label class="btn_success" for="fileLoader">
+            <input id="fileLoader" type="file">UPLOAD YOUR FACE PICTURE PLZ
+        </label>
+        
+        
+        <h3 id="age_checking_msg">WE WILL ALSO RECOMMEND A GAME FOR YOU!</h3>
+        
+        <iframe id="video_link" src=""></iframe>
+        <h3 id="game_recommended_msg"><h3>
+        
+        </section>
+         
+        <div id="clear"> CLASS </div>
+       
+        <div id="classcontainer">
+            <div id="classblock">
+                <section>
+                    <img src="./img/DKlogo.gif" />
+                    <h2>Dragon Slayer</h2>
+                    <p>Dragon Slayer possesses powerful sword skills. Has limited surviving skills but
+                    high defense parameter than other class. Lacks ranged skills. Their stylish
+                    attack and ultimates will devastate enemies. Well known for killing dragons.</p>
+                </section>
+            </div>
+            <div id="classblock">
+                <section>
+                    <img src="./img/wzlogo.jpg" />
+                    <h2>Dark Wizard</h2>
+                    <p>Dark Wizard possesses powerful magic skills. Can damage multiple enemies using their 
+                        dark magic. Has lowest health but highest mana which enables them to cast 
+                        catastrophic magic skills. Lacks close combat skills.</p>
+                </section>
+            </div>
+            <div id="classblock">
+                <section>
+                    <img src="./img/apLogo.png" />
+                    <h2>Shadow Priest</h2>
+                    <p>Shadow Priest possesses highly effective healing spells that can save the ones around
+                        shadow priest. And yet they are capable of casting shadow spells that can devastate 
+                        enemies but it is not effective as Dark Wizard's dark magic.</p>
+                </section>
+            </div>
+        </div>
+    
+    <div class="sectionclear">GAME PLAY</div>
+    
+    <div id="infocontainer">
+        <div id="infoblock">
+            <section>
+                <img src="./img/cbs.png" />
+                <h2>Dynamic Combat</h2>
+                <p>Combat system is so Dynamic. The flow of the combat will not give you time to be bored!
+                    You will have to focus not to die in the field ! </p>
+            </section>
+        </div>
+        <div id="infoblock">
+            <section>
+                <img src="./img/coop.png" />
+                <h2>Co-Op play</h2>
+                <p>You can play with friends. Connect with your buddies and conquer the Fantasy world ! It makes it 
+                    more fun! </p>
+            </section>
+        </div>
+        <div id="infoblock">
+            <section>
+                <img src="./img/funboss.png" />
+                <h2>Fun Boss Fights</h2>
+                <p>There will be many boss fights in every dungeon and field maps. Conquer them so that you can
+                    grab nice weapon and gears!</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <section>
+            <ul class="social">
+                <li>Share on Facebook</li>
+                <li><a href="#"><img src="./img/facebook-share-button.png" /></a></li>
+                
+            </ul>
+            <h4 id="contact">@ Copyright Last Fantasy World 2016.  Contact:  Horyang Park, ghfid86@gmail.com </h4>
+        </section>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <script src="sweetalert.min.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <script>
+            $(function () {
+        $(".rslides").responsiveSlides();
+        });
+    </script>
+
+    
+    
+    
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '1223355047695430',
+            xfbml      : true,
+            version    : 'v2.7'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+ 
+    
+   
+
+</body>
+
+</html>
