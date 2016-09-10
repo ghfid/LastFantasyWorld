@@ -48,7 +48,7 @@ a {
 }
 
 a::hover{
-    color: #D1F2EB;
+    color: yellowgreen;
     text-decoration: underline;
 }
 
