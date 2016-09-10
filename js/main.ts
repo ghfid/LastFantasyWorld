@@ -74,6 +74,7 @@ function changeUI(verdict, gameRecommended, age) : void {
     ageComment.innerHTML = verdict;
     var img: HTMLImageElement = <HTMLImageElement> $("#img_Link")[0]; 
     img.src = gameRecommended.imgLink; 
+    img.style.display = "block";
     
     
     if(age <= 13)

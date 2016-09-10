@@ -53,6 +53,7 @@ function changeUI(verdict, gameRecommended, age) {
     ageComment.innerHTML = verdict;
     var img = $("#img_Link")[0];
     img.src = gameRecommended.imgLink;
+    img.style.display = "block";
     if (age <= 13) {
         gameRecommendedMsg.innerHTML = "Sorry, there is no game recommendation matching your age.";
     }
@@ -145,7 +146,7 @@ var game11 = new Game("Alien Isolation", "./img/aliensc.jpg");
 var game12 = new Game("The Swapper", "./img/swappersc.jpg");
 var game13 = new Game("Dark Souls 3", "./img/ds3sc2.jpg");
 var game14 = new Game("Dark Souls 3 Expension", "./img/ds3exsc.jpg");
-var game15 = new Game("Bejeweled 3", "./img/bjwsc.jpg");
+var game15 = new Game("Bejeweled 3", "./img/bjwsc.jpeg");
 var game16 = new Game("No", "./img/sorrysc.jpg");
 /* Game recommendation list */
 var gameList = [game1, game2, game3, game4, game5, game6,
