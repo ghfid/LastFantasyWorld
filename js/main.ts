@@ -1,4 +1,4 @@
-
+/// <reference path="./jquery.d.ts"/>
 
 function mainWarning() : void {
 
@@ -22,8 +22,8 @@ var gameRecommended : Game;
 var imgSelecter : HTMLInputElement = <HTMLInputElement> $("#fileLoader")[0];
 var ageComment = $("#age_checking_msg")[0];
 var gameRecommendedMsg = $("#game_recommended_msg")[0];
-var age: any;
-var verdict: any;
+var age: number;
+var verdict: string;
 
 mainWarning();
 
@@ -47,7 +47,7 @@ imgSelecter.addEventListener("change", function () {
 });
 
 
-function processImage(callback) {
+function processImage(callback : any)  {
     var file = imgSelecter.files[0]; 
     var reader = new FileReader();
     if (file) {
@@ -69,7 +69,7 @@ function processImage(callback) {
 }
 
 
-function changeUI(verdict, gameRecommended, age) : void {
+function changeUI(verdict: string, gameRecommended: Game, age: number) : void {
   
     ageComment.innerHTML = verdict;
     var img: HTMLImageElement = <HTMLImageElement> $("#img_Link")[0]; 
@@ -90,7 +90,7 @@ function changeUI(verdict, gameRecommended, age) : void {
 
 
 
-function sendFaceRequest(file, callback) : void {
+function sendFaceRequest(file: any, callback: any) : void {
     $.ajax({
         url: "https://api.projectoxford.ai/face/v1.0/detect?returnFaceAttributes=age",
         beforeSend: function (xhrObj) {
@@ -121,12 +121,12 @@ function sendFaceRequest(file, callback) : void {
 }
 
 
-function getAge(faceAttributes : any) 
+function getAge(faceAttributes : any) : any
 {
     return faceAttributes.age;
 }
 
-function getVerdict(age : any) : any
+function getVerdict(age : number) : string
 {
     var verdict = "";
     if(age <= 13){
@@ -142,7 +142,7 @@ function getVerdict(age : any) : any
     return verdict;
 }
 
-function getGameRecommendation(age :any) : Game
+function getGameRecommendation(age :number) : Game
 {
     
     var randHigh = Math.floor(Math.random() * 15 + 8);
@@ -164,7 +164,7 @@ function getGameRecommendation(age :any) : Game
 
     else if(age <= 13)
     {
-        gameRecommended = gameList[15];
+        gameRecommended = notToRecommended;
     }
 
     return gameRecommended;
@@ -203,10 +203,12 @@ var game12 : Game = new Game("The Swapper","./img/swappersc.jpg");
 var game13 : Game = new Game("Dark Souls 3","./img/ds3sc2.jpg");
 var game14 : Game = new Game("Dark Souls 3 Expension","./img/ds3exsc.jpg");
 var game15 : Game = new Game("Bejeweled 3","./img/bjwsc.jpeg");
-var game16 : Game = new Game("No","./img/sorrysc.jpg")
+
+// for age that goes under 13
+var notToRecommended : Game = new Game("No","./img/sorrysc.jpg")
 
 /* Game recommendation list */
 var gameList = [game1,game2,game3,game4,game5,game6,
-game7,game8,game9,game10,game11,game12,game13,game14,game15,game16];
+game7,game8,game9,game10,game11,game12,game13,game14,game15];
 
 

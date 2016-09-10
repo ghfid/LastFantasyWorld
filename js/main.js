@@ -1,3 +1,4 @@
+/// <reference path="./jquery.d.ts"/>
 function mainWarning() {
     swal({
         title: 'Face Check Required',
@@ -116,7 +117,7 @@ function getGameRecommendation(age) {
         gameRecommended = gameList[randLow];
     }
     else if (age <= 13) {
-        gameRecommended = gameList[15];
+        gameRecommended = notToRecommended;
     }
     return gameRecommended;
 }
@@ -147,7 +148,8 @@ var game12 = new Game("The Swapper", "./img/swappersc.jpg");
 var game13 = new Game("Dark Souls 3", "./img/ds3sc2.jpg");
 var game14 = new Game("Dark Souls 3 Expension", "./img/ds3exsc.jpg");
 var game15 = new Game("Bejeweled 3", "./img/bjwsc.jpeg");
-var game16 = new Game("No", "./img/sorrysc.jpg");
+// for age that goes under 13
+var notToRecommended = new Game("No", "./img/sorrysc.jpg");
 /* Game recommendation list */
 var gameList = [game1, game2, game3, game4, game5, game6,
-    game7, game8, game9, game10, game11, game12, game13, game14, game15, game16];
+    game7, game8, game9, game10, game11, game12, game13, game14, game15];
